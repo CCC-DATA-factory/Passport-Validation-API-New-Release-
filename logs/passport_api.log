@@ -1,0 +1,61 @@
+[2025-11-11 17:49:04,994] [INFO] [passport_api] Logger works!
+[2025-11-11 18:29:11,287] [ERROR] [passport_api] Unexpected error in /v4/passport
+Traceback (most recent call last):
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\app\api\v4\endpoints\passport.py", line 79, in process_passport
+    return PassportResponse(**mrz_dict.dict(exclude_none=False))
+                              ^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'dict'
+[2025-11-11 19:47:27,799] [ERROR] [passport_api] Unexpected error in /v4/passport
+Traceback (most recent call last):
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\app\api\v4\endpoints\passport.py", line 56, in process_passport
+    mrz_data = service.process_passport(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\domain\logic\passport_service.py", line 48, in process_passport
+    parsed_data = self.parser.parse(mrz_texts)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\domain\logic\parser_adapter.py", line 80, in parse
+    validation_flags = validate_mrz_fields(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\utils\validators.py", line 157, in validate_mrz_fields
+    "".join([
+TypeError: sequence item 2: expected str instance, NoneType found
+[2025-11-11 19:49:45,023] [ERROR] [passport_api] Unexpected error in /v4/passport
+Traceback (most recent call last):
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\app\api\v4\endpoints\passport.py", line 56, in process_passport
+    mrz_data = service.process_passport(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\domain\logic\passport_service.py", line 48, in process_passport
+    parsed_data = self.parser.parse(mrz_texts)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\domain\logic\parser_adapter.py", line 80, in parse
+    validation_flags = validate_mrz_fields(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\utils\validators.py", line 157, in validate_mrz_fields
+    "".join([
+TypeError: sequence item 2: expected str instance, NoneType found
+[2025-11-13 13:54:18,571] [INFO] [passport_api] Logger initialized successfully
+[2025-11-13 13:54:18,577] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-13 13:54:18,584] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-13 13:54:46,149] [INFO] [passport_api] Processing uploaded image file: Austria Passport-1.jpg
+[2025-11-13 13:54:47,635] [INFO] [passport_api] Detected MRZ lines: ['P<AUTTRUMP<<DONALD<JOHN<<<<<<<<<<<<<<<<<<<<<', 'U1169919<6AUT4606145M2607241<<<<<<<<<<<<<<<6']
+[2025-11-13 13:54:47,641] [INFO] [passport_api] Parsed data keys: ['mrz_type', 'valid_score', 'type', 'country', 'number', 'date_of_birth', 'expiration_date', 'nationality', 'sex', 'names', 'surname', 'personal_number', 'check_number', 'check_date_of_birth', 'check_expiration_date', 'check_composite', 'check_personal_number', 'valid_number', 'valid_date_of_birth', 'valid_expiration_date', 'valid_composite', 'valid_personal_number', 'is_valid']
+[2025-11-13 13:54:47,642] [INFO] [passport_api] Type field value: P
+[2025-11-13 13:54:47,643] [INFO] [passport_api] Type field type: <class 'str'>
+[2025-11-13 13:54:47,647] [INFO] [passport_api] MRZData dict: {'mrz_texts': ['P<AUTTRUMP<<DONALD<JOHN<<<<<<<<<<<<<<<<<<<<<', 'U1169919<6AUT4606145M2607241<<<<<<<<<<<<<<<6'], 'mrz_type': 'TD3', 'document_type': 'P', 'country': 'AUT', 'number': 'U1169919', 'date_of_birth': '1946-06-14', 'expiration_date': '2026-07-24', 'nationality': 'AUT', 'sex': 'M', 'names': 'DONALD JOHN', 'surname': 'TRUMP', 'personal_number': '', 'check_number': '6', 'check_date_of_birth': '5', 'check_expiration_date': '1', 'check_composite': '6', 'check_personal_number': '<', 'valid_number': True, 'valid_date_of_birth': False, 'valid_expiration_date': False, 'valid_composite': True, 'valid_personal_number': False, 'valid_score': 100, 'is_valid': False}
+[2025-11-13 13:55:55,262] [INFO] [passport_api] Passport MRZ API is shutting down...
+[2025-11-14 13:29:30,806] [INFO] [passport_api] Logger initialized successfully
+[2025-11-14 13:29:30,810] [ERROR] [passport_api] Failed to initialize TurboJPEG: Could not find module 'C:\usr\lib\x86_64-linux-gnu\libturbojpeg.so' (or one of its dependencies). Try using the full path with constructor syntax.
+[2025-11-14 13:30:21,624] [INFO] [passport_api] Logger initialized successfully
+[2025-11-14 13:30:21,795] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-14 13:30:21,802] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-14 13:31:25,020] [INFO] [passport_api] Logger initialized successfully
+[2025-11-14 13:31:25,027] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-14 13:31:25,033] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-14 13:32:58,874] [INFO] [passport_api] Logger initialized successfully
+[2025-11-14 13:32:58,885] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-14 13:32:58,893] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-14 13:32:58,894] [INFO] [passport_api] Passport MRZ API is shutting down...
+[2025-11-14 13:33:10,975] [INFO] [passport_api] Logger initialized successfully
+[2025-11-14 13:33:10,979] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-14 13:33:10,985] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-14 13:33:42,073] [INFO] [passport_api] Passport MRZ API is shutting down...

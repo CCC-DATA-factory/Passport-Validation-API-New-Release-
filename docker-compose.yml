@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  passport_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: passport_api
+    ports:
+      - "8000:8000"
+    environment:
+      LOG_LEVEL: "INFO"
+      TESSERACT_CMD: "/usr/bin/tesseract"
+      TURBOJPEG_DLL_PATH: "/usr/lib/x86_64-linux-gnu/libturbojpeg.so"
+
+    restart: always
+
