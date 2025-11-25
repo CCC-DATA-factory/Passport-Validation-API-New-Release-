@@ -149,13 +149,13 @@ def validate_mrz_fields(mrz_data: Dict[str, str]) -> Dict[str, bool]:
     Returns: dict of boolean flags for each field.
     """
     return {
-        "valid_number": verify_checksum(mrz_data.get("number"), mrz_data.get("check_number")),
+        "valid_number": verify_checksum(mrz_data.get("passport_number"), mrz_data.get("check_number")),
         "valid_date_of_birth": verify_checksum(mrz_data.get("date_of_birth"), mrz_data.get("check_date_of_birth")),
         "valid_expiration_date": verify_checksum(mrz_data.get("expiration_date"), mrz_data.get("check_expiration_date")),
         "valid_personal_number": verify_checksum(mrz_data.get("personal_number"), mrz_data.get("check_personal_number")),
         "valid_composite": verify_checksum(
             "".join([
-                mrz_data.get("number", ""),
+                mrz_data.get("passport_number", ""),
                 mrz_data.get("check_number", ""),
                 mrz_data.get("date_of_birth", ""),
                 mrz_data.get("check_date_of_birth", ""),

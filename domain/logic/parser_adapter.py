@@ -38,51 +38,55 @@ class PassportEyeParser(BaseMRZParser):
         if not mrz_texts or not isinstance(mrz_texts, list):
             raise ValueError("MRZ texts must be a non-empty list of strings.")
 
-        # Parse MRZ with PassportEye
-        mrz_obj = MRZ(mrz_texts)
-        if mrz_obj is None:
-            raise ValueError("Failed to parse MRZ lines with PassportEye.")
+        try:
+            # ----------------------------
+            # Parse MRZ with PassportEye
+            # ----------------------------
+            mrz_obj = MRZ(mrz_texts)
+            if mrz_obj is None:
+                raise ValueError("Failed to parse MRZ lines with PassportEye.")
 
-        # Convert to dict
-        data = mrz_obj.to_dict()
+            data = mrz_obj.to_dict()
 
-        # ✅ CHECK IF PARSING FAILED - type field is critical
-        if "type" not in data or data.get("type") is None:
-            raise ValueError(
-                f"PassportEye failed to extract document type. "
-                f"MRZ lines may be invalid or unreadable: {mrz_texts}"
-            )
+            # Critical field: document type
+            if "type" not in data or data.get("type") is None:
+                raise ValueError("MRZ does not look like a valid passport.")
 
-        # ----------------------------
-        # 1️⃣ Normalize string fields
-        # ----------------------------
-        string_fields = ["type", "country", "number", "nationality", "sex",
-                         "names", "surname", "personal_number"]
-        for field in string_fields:
-            if field in data:
-                data[field] = normalize_field(data[field])
+            # ----------------------------
+            # Normalize string fields
+            # ----------------------------
+            string_fields = ["type", "country", "number", "nationality", "sex",
+                            "names", "surname", "personal_number"]
+            for field in string_fields:
+                if field in data:
+                    data[field] = normalize_field(data[field])
 
-        # ----------------------------
-        # 2️⃣ Convert dates to YYYY-MM-DD
-        # ----------------------------
-        date_fields = ["date_of_birth", "expiration_date"]
-        for field in date_fields:
-            if field in data:
-                is_expiration = field == "expiration_date"
-                converted = convert_date(data[field], is_expiration=is_expiration)
-                data[field] = converted
+            # ----------------------------
+            # Convert dates
+            # ----------------------------
+            date_fields = ["date_of_birth", "expiration_date"]
+            for field in date_fields:
+                if field in data:
+                    is_expiration = field == "expiration_date"
+                    data[field] = convert_date(data[field], is_expiration=is_expiration)
 
-        if data.get("country") == "TUN" and "personal_number" in data:
-            data["personal_number"] = data["personal_number"][:8]
-        # ----------------------------
-        # 3️⃣ Validate MRZ fields using utils
-        # ----------------------------
-        validation_flags = validate_mrz_fields(data)
-        data.update(validation_flags)
+            # Tunisia fix
+            if data.get("country") == "TUN" and "personal_number" in data:
+                data["personal_number"] = data["personal_number"][:8]
 
-        # ----------------------------
-        # 4️⃣ Compute overall validity
-        # ----------------------------
-        data["is_valid"] = compute_overall_validity(validation_flags)
+            # ----------------------------
+            # Validate MRZ fields
+            # ----------------------------
+            validation_flags = validate_mrz_fields(data)
+            data.update(validation_flags)
 
-        return data
+            # ----------------------------
+            # Compute validity
+            # ----------------------------
+            data["is_valid"] = compute_overall_validity(validation_flags)
+
+            return data
+
+        except Exception as e:
+            # ⛔ Convert ANY parsing/validation failure into a clean message
+            raise ValueError("This image does not contain a valid passport MRZ. Please upload a passport image.") from e

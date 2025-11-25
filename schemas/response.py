@@ -13,13 +13,13 @@ class PassportResponse(BaseModel):
     mrz_type: Optional[str]
     valid_score: Optional[int]
     document_type: Optional[str]
-    country: Optional[str]
-    number: Optional[str]
+    country_code: Optional[str]
+    passport_number: Optional[str]
     date_of_birth: Optional[str]  # YYYY-MM-DD
     expiration_date: Optional[str]  # YYYY-MM-DD
     nationality: Optional[str]
     sex: Optional[str]
-    names: Optional[str]
+    given_names: Optional[str]
     surname: Optional[str]
     personal_number: Optional[str]
     check_number: Optional[str]

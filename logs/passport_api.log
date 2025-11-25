@@ -59,3 +59,84 @@ TypeError: sequence item 2: expected str instance, NoneType found
 [2025-11-14 13:33:10,979] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
 [2025-11-14 13:33:10,985] [INFO] [passport_api] Passport MRZ API is starting...
 [2025-11-14 13:33:42,073] [INFO] [passport_api] Passport MRZ API is shutting down...
+[2025-11-24 17:45:11,523] [INFO] [passport_api] Logger initialized successfully
+[2025-11-24 17:45:12,137] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-24 17:45:12,193] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-24 17:45:12,214] [INFO] [passport_api] Passport MRZ API is shutting down...
+[2025-11-24 18:08:09,301] [INFO] [passport_api] Logger initialized successfully
+[2025-11-24 18:08:09,310] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-24 18:08:09,315] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-24 18:26:47,361] [INFO] [passport_api] Passport MRZ API is shutting down...
+[2025-11-25 12:24:49,469] [INFO] [passport_api] Logger initialized successfully
+[2025-11-25 12:24:49,578] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-25 12:24:49,584] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-25 12:35:31,267] [INFO] [passport_api] Processing uploaded image file: 2.jpeg
+[2025-11-25 12:35:34,507] [INFO] [passport_api] Detected MRZ lines: ['P<CIVGBOKO<<GOKUI<LUCIEN<<<<<<<<<<<<<<<<<<<<', '13AD474107CIV8408211M1811261<<<<<<<<<<<<<<0H']
+[2025-11-25 12:35:34,776] [INFO] [passport_api] Parsed data keys: ['mrz_type', 'valid_score', 'type', 'country', 'number', 'date_of_birth', 'expiration_date', 'nationality', 'sex', 'names', 'surname', 'personal_number', 'check_number', 'check_date_of_birth', 'check_expiration_date', 'check_composite', 'check_personal_number', 'valid_number', 'valid_date_of_birth', 'valid_expiration_date', 'valid_composite', 'valid_personal_number', 'is_valid']
+[2025-11-25 12:35:34,783] [INFO] [passport_api] Type field value: P
+[2025-11-25 12:35:34,788] [INFO] [passport_api] Type field type: <class 'str'>
+[2025-11-25 12:35:34,794] [INFO] [passport_api] MRZData dict: {'mrz_texts': ['P<CIVGBOKO<<GOKUI<LUCIEN<<<<<<<<<<<<<<<<<<<<', '13AD474107CIV8408211M1811261<<<<<<<<<<<<<<0H'], 'mrz_type': 'TD3', 'document_type': 'P', 'country_code': 'CIV', 'passport_number': '13AD47410', 'date_of_birth': '1984-08-21', 'expiration_date': '2018-11-26', 'nationality': 'CIV', 'sex': 'M', 'given_names': 'GOKUI LUCIEN', 'surname': 'GBOKO', 'personal_number': '', 'check_number': '7', 'check_date_of_birth': '1', 'check_expiration_date': '1', 'check_composite': 'H', 'check_personal_number': '0', 'valid_number': True, 'valid_date_of_birth': False, 'valid_expiration_date': False, 'valid_composite': False, 'valid_personal_number': False, 'valid_score': 81, 'is_valid': False}
+[2025-11-25 12:54:15,087] [INFO] [passport_api] Passport MRZ API is shutting down...
+[2025-11-25 12:54:21,766] [INFO] [passport_api] Logger initialized successfully
+[2025-11-25 12:54:21,772] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-25 12:54:21,777] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-25 12:59:32,017] [INFO] [passport_api] Passport MRZ API is shutting down...
+[2025-11-25 12:59:36,627] [INFO] [passport_api] Logger initialized successfully
+[2025-11-25 12:59:36,629] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-25 12:59:36,637] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-25 12:59:55,352] [INFO] [passport_api] Processing uploaded image file: 2.jpeg
+[2025-11-25 12:59:57,952] [INFO] [passport_api] Detected MRZ lines: ['P<CIVGBOKO<<GOKUI<LUCIEN<<<<<<<<<<<<<<<<<<<<', '13AD474107CIV8408211M1811261<<<<<<<<<<<<<<0H']
+[2025-11-25 12:59:57,959] [INFO] [passport_api] Parsed data keys: ['mrz_type', 'valid_score', 'type', 'country', 'number', 'date_of_birth', 'expiration_date', 'nationality', 'sex', 'names', 'surname', 'personal_number', 'check_number', 'check_date_of_birth', 'check_expiration_date', 'check_composite', 'check_personal_number', 'valid_number', 'valid_date_of_birth', 'valid_expiration_date', 'valid_composite', 'valid_personal_number', 'is_valid']
+[2025-11-25 12:59:57,961] [INFO] [passport_api] Type field value: P
+[2025-11-25 12:59:57,961] [INFO] [passport_api] Type field type: <class 'str'>
+[2025-11-25 12:59:57,963] [INFO] [passport_api] MRZData dict: {'mrz_texts': ['P<CIVGBOKO<<GOKUI<LUCIEN<<<<<<<<<<<<<<<<<<<<', '13AD474107CIV8408211M1811261<<<<<<<<<<<<<<0H'], 'mrz_type': 'TD3', 'document_type': 'P', 'country_code': 'CIV', 'passport_number': '13AD47410', 'date_of_birth': '1984-08-21', 'expiration_date': '2018-11-26', 'nationality': 'CIV', 'sex': 'M', 'given_names': 'GOKUI LUCIEN', 'surname': 'GBOKO', 'personal_number': '', 'check_number': '7', 'check_date_of_birth': '1', 'check_expiration_date': '1', 'check_composite': 'H', 'check_personal_number': '0', 'valid_number': False, 'valid_date_of_birth': False, 'valid_expiration_date': False, 'valid_composite': False, 'valid_personal_number': False, 'valid_score': 81, 'is_valid': False}
+[2025-11-25 13:10:34,361] [INFO] [passport_api] Processing uploaded image file: id_card_back.jpg
+[2025-11-25 13:10:36,525] [INFO] [passport_api] Detected MRZ lines: ['YLSBMMW8W770I3W722EEEB755MTDYM', 'LMWMWMWMWLM2LMTT7MM07DM0BWM<VT', '7TMOM2Y00MMM0M0700850Q558W0M55']
+[2025-11-25 13:10:36,535] [ERROR] [passport_api] Unexpected error in /v4/passport
+Traceback (most recent call last):
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\app\api\v4\endpoints\passport.py", line 56, in process_passport
+    mrz_data = service.process_passport(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\domain\logic\passport_service.py", line 48, in process_passport
+    parsed_data = self.parser.parse(mrz_texts)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\domain\logic\parser_adapter.py", line 80, in parse
+    validation_flags = validate_mrz_fields(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\utils\validators.py", line 157, in validate_mrz_fields
+    "".join([
+TypeError: sequence item 2: expected str instance, NoneType found
+[2025-11-25 13:15:59,990] [INFO] [passport_api] Passport MRZ API is shutting down...
+[2025-11-25 13:16:06,098] [INFO] [passport_api] Logger initialized successfully
+[2025-11-25 13:16:06,103] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-25 13:16:06,108] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-25 13:16:30,334] [INFO] [passport_api] Processing uploaded image file: id_card_back.jpg
+[2025-11-25 13:16:32,160] [INFO] [passport_api] Detected MRZ lines: ['YLSBMMW8W770I3W722EEEB755MTDYM', 'LMWMWMWMWLM2LMTT7MM07DM0BWM<VT', '7TMOM2Y00MMM0M0700850Q558W0M55']
+[2025-11-25 13:16:32,162] [ERROR] [passport_api] Unexpected error in /v4/passport
+Traceback (most recent call last):
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\app\api\v4\endpoints\passport.py", line 56, in process_passport
+    mrz_data = service.process_passport(tmp_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\domain\logic\passport_service.py", line 48, in process_passport
+    parsed_data = self.parser.parse(mrz_texts)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\domain\logic\parser_adapter.py", line 80, in parse
+    validation_flags = validate_mrz_fields(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\atef nasri\Documents\Projects\ASEL_projects\passport_api\utils\validators.py", line 157, in validate_mrz_fields
+    "".join([
+TypeError: sequence item 2: expected str instance, NoneType found
+[2025-11-25 13:26:03,183] [INFO] [passport_api] Passport MRZ API is shutting down...
+[2025-11-25 13:26:09,576] [INFO] [passport_api] Logger initialized successfully
+[2025-11-25 13:26:09,583] [INFO] [passport_api] TurboJPEG loaded from: C:\libjpeg-turbo64\bin\turbojpeg.dll
+[2025-11-25 13:26:09,587] [INFO] [passport_api] Passport MRZ API is starting...
+[2025-11-25 13:26:32,325] [INFO] [passport_api] Processing uploaded image file: id_card_back.jpg
+[2025-11-25 13:26:34,408] [INFO] [passport_api] Detected MRZ lines: ['YLSBMMW8W770I3W722EEEB755MTDYM', 'LMWMWMWMWLM2LMTT7MM07DM0BWM<VT', '7TMOM2Y00MMM0M0700850Q558W0M55']
+[2025-11-25 13:26:34,411] [ERROR] [passport_api] Parsing failed: This image does not contain a valid passport MRZ. Please upload a passport image.
+[2025-11-25 13:27:04,596] [INFO] [passport_api] Processing uploaded image file: passsthree.jpg
+[2025-11-25 13:27:06,369] [INFO] [passport_api] Detected MRZ lines: ['P<TUNZIADI<<HIBA<<<<<<<<<<<<<<<<<<<<<<<<<<<<', 'N968095<<4TUN0302173F300611714438370<0204<44']
+[2025-11-25 13:27:06,398] [INFO] [passport_api] Parsed data keys: ['mrz_type', 'valid_score', 'type', 'country', 'number', 'date_of_birth', 'expiration_date', 'nationality', 'sex', 'names', 'surname', 'personal_number', 'check_number', 'check_date_of_birth', 'check_expiration_date', 'check_composite', 'check_personal_number', 'valid_number', 'valid_date_of_birth', 'valid_expiration_date', 'valid_composite', 'valid_personal_number', 'is_valid']
+[2025-11-25 13:27:06,399] [INFO] [passport_api] Type field value: P
+[2025-11-25 13:27:06,400] [INFO] [passport_api] Type field type: <class 'str'>
+[2025-11-25 13:27:06,407] [INFO] [passport_api] MRZData dict: {'mrz_texts': ['P<TUNZIADI<<HIBA<<<<<<<<<<<<<<<<<<<<<<<<<<<<', 'N968095<<4TUN0302173F300611714438370<0204<44'], 'mrz_type': 'TD3', 'document_type': 'P', 'country_code': 'TUN', 'passport_number': 'N968095', 'date_of_birth': '2003-02-17', 'expiration_date': '2030-06-11', 'nationality': 'TUN', 'sex': 'F', 'given_names': 'HIBA', 'surname': 'ZIADI', 'personal_number': '14438370', 'check_number': '4', 'check_date_of_birth': '3', 'check_expiration_date': '7', 'check_composite': '4', 'check_personal_number': '4', 'valid_number': False, 'valid_date_of_birth': False, 'valid_expiration_date': True, 'valid_composite': False, 'valid_personal_number': False, 'valid_score': 100, 'is_valid': False}
+[2025-11-25 13:30:10,233] [INFO] [passport_api] Passport MRZ API is shutting down...

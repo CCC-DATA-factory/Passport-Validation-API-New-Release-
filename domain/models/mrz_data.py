@@ -10,13 +10,13 @@ class MRZData(BaseModel):
     # --- MRZ fields parsed by the parser ---
     mrz_type: Optional[str] = None
     document_type: Optional[str] = None
-    country: Optional[str] = None
-    number: Optional[str] = None
+    country_code: Optional[str] = None
+    passport_number: Optional[str] = None
     date_of_birth: Optional[str] = None  # Will be normalized to YYYY-MM-DD
     expiration_date: Optional[str] = None  # Will be normalized to YYYY-MM-DD
     nationality: Optional[str] = None
     sex: Optional[str] = None
-    names: Optional[str] = None
+    given_names: Optional[str] = None
     surname: Optional[str] = None
     personal_number: Optional[str] = None
 
@@ -44,7 +44,7 @@ class MRZData(BaseModel):
     # -----------------------------
 
     @validator(
-        "document_type", "country", "nationality", "names", "surname", "personal_number", "number",
+        "document_type", "country_code", "nationality", "given_names", "surname", "personal_number", "passport_number",
         pre=True, always=True
     )
     def clean_strings(cls, v):

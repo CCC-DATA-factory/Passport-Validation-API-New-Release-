@@ -52,20 +52,20 @@ class PassportService:
             logger.info(f"Type field type: {type(parsed_data.get('type'))}")
         except ValueError as e:
             logger.error(f"Parsing failed: {e}")
-            raise
+            raise ValueError("Image does not contain a valid passport MRZ. Please try another image.")
         # 4️⃣ Convert to MRZData model (enforces typing + normalization)
         mrz_data = MRZData(
             mrz_texts=mrz_texts,
             mrz_type=parsed_data.get("mrz_type"),
             valid_score=parsed_data.get("valid_score"),
             document_type=parsed_data.get("type"),
-            country=parsed_data.get("country"),
-            number=parsed_data.get("number"),
+            country_code=parsed_data.get("country"),
+            passport_number=parsed_data.get("number"),
             date_of_birth=parsed_data.get("date_of_birth"),
             expiration_date=parsed_data.get("expiration_date"),
             nationality=parsed_data.get("nationality"),
             sex=parsed_data.get("sex"),
-            names=parsed_data.get("names"),
+            given_names=parsed_data.get("names"),
             surname=parsed_data.get("surname"),
             personal_number=parsed_data.get("personal_number"),
             check_number=parsed_data.get("check_number"),
